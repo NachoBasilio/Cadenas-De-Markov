@@ -10,19 +10,44 @@ const funcionRandomizadora = (n) =>{
     }
     return ArrayPartidosJugados
 }
+
 const separadora = (PartidosJugados) => {
-    let CantidadDeW = 0
-    let CantidadDeL = 0
+    let CantidadDeWW = 0
+    let CantidadDeWL = 0
+    let CantidadDeLW = 0
+    let CantidadDeLL = 0
+
     for(let i = 0; i < PartidosJugados.length; i++){
-        if(PartidosJugados[i] === "W"){
-            CantidadDeW = CantidadDeW + 1
-        } else{
-            CantidadDeL = CantidadDeL + 1
-        }
+       switch(PartidosJugados[i]+PartidosJugados[i+1]){
+           case "WW" : CantidadDeWW = CantidadDeWW + 1
+           break
+           case "WL" : CantidadDeWL = CantidadDeWL + 1 
+           break
+           case "LW" : CantidadDeLW = CantidadDeLW + 1
+           break
+           case "LL" : CantidadDeLL = CantidadDeLL + 1
+           break
+           default: switch(PartidosJugados[i-1]+PartidosJugados[i]){
+            case "WW" : CantidadDeWW = CantidadDeWW + 1
+            break
+            case "WL" : CantidadDeWL = CantidadDeWL + 1 
+            break
+            case "LW" : CantidadDeLW = CantidadDeLW + 1
+            break
+            case "LL" : CantidadDeLL = CantidadDeLL + 1
+            break
+           }
+           break
+       }
     }
-    return [`W = ${CantidadDeW}`, `L = ${CantidadDeL}`]
+    return [CantidadDeLW, CantidadDeWW, CantidadDeLL, CantidadDeWL]
 }
 
-let PartidosJugadosTemporada = funcionRandomizadora(32)
 
+
+
+let PartidosJugadosTemporada = funcionRandomizadora(32)
+console.log(PartidosJugadosTemporada)
 console.log(separadora(PartidosJugadosTemporada))
+
+
