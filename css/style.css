@@ -6,6 +6,7 @@
 
 html{
     font-size: 62.5%;
+    height: 100%;
 }
 
 header{
@@ -15,59 +16,77 @@ header{
     margin-bottom: 15px;
 }
 
-.main{
+.main__divsinsec{
+    display: inline-block;
+    background-color: grey;
+    width: 277px;
+    font-size: 2rem;
+    overflow-x: scroll;
+    position: relative;
+    top: 20px;
+
+}
+
+.container{
+    display: inline-block;
+    margin-left: 35%;
     
 }
 
 .main__section{
     display: inline-block;
-    background-color: grey;
-    font-size: 1.6rem;
+    font-size: 2rem;
     
 }
 
-.main__button{
-    font-size: 1.6rem;
-    margin: 10px;
-    margin-left: 37%;
+.main__section-tables{
+    margin: 0 auto;
 }
+
+
+
+.main__button{
+    font-size: 2rem;
+    margin: 10px;
+}
+
 .main__table{
     display: inline-block;
     margin-top: 20px;
-    margin-left: 40%;
-    font-size: 1.6rem;
+    margin-left: 35%;
+    font-size: 3rem;
 
 }
 
 .main__section--active{
     display: inline-block;
     position: relative;
-    bottom: 40px;
+    bottom: 85px;
     margin-right: 10px;
-    font-size: 1.6rem;
+    font-size: 3rem;
 }
 
 .main__table1x2{
     display: inline-block;
     margin: 0;
     padding:0;
-    font-size: 1.6rem;
+    font-size: 3rem;
 }
 
 .main__section--active-a{
     display: inline-block;
     position: relative;
-    bottom: 40px;
+    bottom: 85px;
     left: 10px;
     margin-right: 15px;
-    font-size: 1.6rem;
+    font-size: 3rem;
 }
 
 .main__table1x2resultados{
     display: inline-block;
     margin: 0;
     padding:0;
-    font-size: 1.6rem;
+    font-size: 3rem;
 }
 
 
@@ -120,49 +139,105 @@ header{
 }
 
 .main__table1x2resultados-td{
-    padding: 10px;
-    background-color;
+    padding: 15px;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-top: 1px solid black;
 }
 .main__table1x2resultados-td--active{
     padding: 10px;
-    background-color;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     position: relative;
-    bottom: 2px;
+    bottom: 15px;
 }
 
 
 /*Textos inferiores*/
-.main__div abbr{
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin: 0 auto;
-    
-    
+
+/*.solucion{
+    display: inline-block;
+    position: absolute;
+    align-items: center;
+    right: 470px;
+    top: 320px;
+
+}*/
+
+/*.main__div{
+    display: inline-block;;
+    font-size: 2rem;
+    margin-right: 112px;
+    position: absolute;
+    top: 325px;
+    left: 680px;
+
 }
-.main__div1 abbr{
-    font-size: 1.2rem;
+
+.main__div1{
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 15px;
+    position: relative;
+    top: 25px;
+    right: 160px;
+    z-index: 1;
+
+
+}
+
+.main__div abbr{
     text-decoration: none;
 }
 
-.solucion{
+.main__div1 abbr{
+    text-decoration: none;
+
+}*/
+
+/*.solucion{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+*/
 
-.main__div{
-    display: inline;
+.mt-td abbr{
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+
+.vei-td abbr{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.resultado-tr{
+    position: relative;
+    margin-top: 20px;
+}
+.resultado-td{
+    font-size: 2rem;
+    color: white;
     
 }
 
-.main__div1{
-    margin-left: 100px;
+/*footer*/
+.footer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
 }
+
+.footer__div p{
+    align-self: flex-end;
+    
+
+}
+
 
 
