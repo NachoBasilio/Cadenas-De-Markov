@@ -17,9 +17,12 @@
         <label for="number">
             <input type="number" name="" id="num" required/>
         </label>
+        <div class="main__divsinsec">
         <section  class="main__section">
             <p id="display"></p>
         </section>
+        </div>
+
     </section>
         
         <!--Tabla 2x2 --> 
@@ -41,6 +44,11 @@
               <td class="main__table-td" id="LW"></td>
               <td class="main__table-td" id="LL"></td>
             </tr>
+            <tr class="mt-tr"> <!--MT-->
+                <th class="mt-th"></th>
+                <td class="mt-td"></td>
+                <td class="mt-td"><abbr title="Matriz de transici&oacute;n">(MT)</abbr></td>
+                <td class="mt-td"></td>
           </table>
           <section class="main__section--active">
               <p class="main__section-p"><b>X</b></p>
@@ -60,6 +68,10 @@
             <th class="main__table1x2-th"></th>   
             <td class="main__table1x2-td--active" id="VI2">nu</td>
           </tr>
+          <tr class="vei-tr"><!--VEI-->
+            <th class="vei-th"></th>   
+            <td class="vei-td"><abbr title="Vector de estados inciales">(VEI)</abbr></td>
+          </tr>
         </table>
         <section class="main__section--active-a">
             <p class="main__section-p"><b>=</b></p>
@@ -78,15 +90,19 @@
               <th class="main__table1x2resultados-th"></th>   
               <td class="main__table1x2resultados-td--active"id="VF2">nu</td>
             </tr>
+            <tr class="resultado-tr">
+                <th class="resultado-th"></th>   
+                <td class="resultado-td">.</td>
+              </tr>
           </table>
-          <section class="solucion">
-          <div class="main__div">
+          <!--<section class="solucion">-->
+          <!--<div class="main__div">
             <abbr title="Matriz de transici&oacute;n">(MT)</abbr>
           </div>
           <div class="main__div1">
             <abbr title="Vector de estados iniciales">(VEI)</abbr>
-          </div>
-          </section>
+          </div>-->
+          <!--</section>-->
         </section>
         
     </main>

@@ -15,10 +15,20 @@ header{
     margin-bottom: 15px;
 }
 
-.main__section{
+.main__divsinsec{
     display: inline-block;
     background-color: grey;
-    font-size: 1.6rem;
+    width: 277px;
+    font-size: 2rem;
+    overflow-x: scroll;
+    position: relative;
+    top: 20px;
+
+}
+
+.main__section{
+    display: inline-block;
+    font-size: 2rem;
     
 }
 
@@ -47,7 +57,7 @@ header{
 .main__section--active{
     display: inline-block;
     position: relative;
-    bottom: 40px;
+    bottom: 85px;
     margin-right: 10px;
     font-size: 3rem;
 }
@@ -62,7 +72,7 @@ header{
 .main__section--active-a{
     display: inline-block;
     position: relative;
-    bottom: 40px;
+    bottom: 85px;
     left: 10px;
     margin-right: 15px;
     font-size: 3rem;
@@ -125,7 +135,7 @@ header{
 }
 
 .main__table1x2resultados-td{
-    padding: 10px;
+    padding: 15px;
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-top: 1px solid black;
@@ -136,31 +146,40 @@ header{
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     position: relative;
-    bottom: 2px;
+    bottom: 15px;
 }
 
 
 /*Textos inferiores*/
 
-.solucion{
+/*.solucion{
     display: inline-block;
-    position: relative;
+    position: absolute;
     align-items: center;
-    right: 300px;
-    top: 20px;
+    right: 470px;
+    top: 320px;
 
-}
+}*/
 
-.main__div{
+/*.main__div{
     display: inline-block;;
     font-size: 2rem;
-    margin-right: 100px;
+    margin-right: 112px;
+    position: absolute;
+    top: 325px;
+    left: 680px;
 
 }
 
 .main__div1{
     display: inline-block;
     font-size: 2rem;
+    margin-left: 15px;
+    position: relative;
+    top: 25px;
+    right: 160px;
+    z-index: 1;
+
 
 }
 
@@ -171,7 +190,7 @@ header{
 .main__div1 abbr{
     text-decoration: none;
 
-}
+}*/
 
 /*.solucion{
     display: flex;
@@ -180,6 +199,27 @@ header{
 }
 */
 
+.mt-td abbr{
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+
+.vei-td abbr{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.resultado-tr{
+    position: relative;
+    margin-top: 20px;
+}
+.resultado-td{
+    font-size: 2rem;
+    color: white;
+    
+}
 
 
 
