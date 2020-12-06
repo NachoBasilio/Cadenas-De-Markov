@@ -83,14 +83,3 @@ Solucionador(20)
 
 let Juan = document.getElementById("holi")
 
-Juan.addEventListener("click", ()=> {
-    let okey = 0
-    if(okey = 0){
-        let he = document.getElementById("hi")
-    he.innerHTML = '<img src="https://pbs.twimg.com/profile_banners/1323683440500350976/1605811854/600x200" />'
-    okey = 1
-    }else{
-        let he = document.getElementById("hi")
-    he.innerHTML = '<img  />'
-    }
-})
