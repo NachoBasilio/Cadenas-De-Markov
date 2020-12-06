@@ -90,5 +90,37 @@ const corregidor = (n) =>{
     }
 }
 
+const boton = document.getElementById("botton")
 
+boton.addEventListener("click", ()=>{
+    let numero = document.getElementById("num").value
+    let objeto = corregidor(numero)
+    let VI1 = document.getElementById("VI1")
+    let VI2 = document.getElementById("VI2")
+    let VF1 = document.getElementById("VF1")
+    let VF2 = document.getElementById("VF2")
+    let display = document.getElementById("display")
+    display.innerText = objeto[5]
+    let WWimp = document.getElementById("WW")
+    WWimp.innerText = objeto[0]
+    let LWimp = document.getElementById("LW")
+    LWimp.innerText = objeto[1]
+    let WLimp = document.getElementById("WL")
+    WLimp.innerText = objeto[2]
+    let LLimp = document.getElementById("LL")
+    LLimp.innerText = objeto[3]
+    console.log(objeto)
+    if(objeto[4]!=="W"){  
+        VI1.innerText = "1"
+        VI2.innerText = "0"
+        VF1.innerText = objeto[2]
+        VF2.innerText = objeto[3]
+    }else{
+        VI1.innerText = "0"
+        VI2.innerText = "1"
+        VF1.innerText = objeto[0]
+        VF2.innerText = objeto[1]
+    }
+
+})
 
