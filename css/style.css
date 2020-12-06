@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62,5%;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: coral;
+}
+
+.main__section{
+    display: inline-block;
+    background-color: grey;
+    
+}
+
+.main__table{
+    display: inline-block;
+}
+
+.main__section--active{
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    margin-right: 10px;
+}
+
+.main__table1x2{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+
+.main__section--active-a{
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+    margin-right: 15px;
+}
+
+.main__table1x2resultados{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
