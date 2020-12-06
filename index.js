@@ -23,50 +23,38 @@ const Solucionador = (Numero) => {
         let CantidadDeW = 0
         let CantidadDeL = 0
     
-        for(let i = 0; i < PartidosJugados.length; i++){
-           switch(PartidosJugados[i]+PartidosJugados[i+1]){
-               case "WW" : CantidadDeWW = CantidadDeWW + 1
-               break
-               case "WL" : CantidadDeWL = CantidadDeWL + 1 
-               break
-               case "LW": CantidadDeLW = CantidadDeLW +1
-               break
-               case "LL" : CantidadDeLL = CantidadDeLL + 1
-               break
-               default: switch(PartidosJugados[i-1]+PartidosJugados[i]){
-                case "WW" : CantidadDeWW = CantidadDeWW + 1
-                break
-                case "WL" : CantidadDeWL = CantidadDeWL + 1 
-                break
-                case "LW": CantidadDeLW = CantidadDeLW +1
-                break
-                case "LL" : CantidadDeLL = CantidadDeLL + 1
-                break
-                default: 
-                break
-               }
-               break
-           }
-    
+        const contadorDeSilavas = (evaluar, cadena)=>{
+            let count = 0
+            for(let i = 0; i < cadena.length; i++){
+                if(evaluar == cadena[i]+cadena[i+1]){
+                    count = count + 1
+                }
+            } 
+            return count
         }
-        for(let i = 0; i < PartidosJugados.length; i++){
-            if(PartidosJugados[i] === "W"){
-                CantidadDeW = CantidadDeW + 1
-            }else{
-                CantidadDeL = CantidadDeL + 1
+
+        CantidadDeWW = contadorDeSilavas("WW",PartidosJugados)
+        CantidadDeWL = contadorDeSilavas("WL",PartidosJugados)
+        CantidadDeLW = contadorDeSilavas("LW",PartidosJugados)
+        CantidadDeLL = contadorDeSilavas("WW",PartidosJugados)
+
+        const contadorDeLetras = (letra, cadena)=>{
+            count = 0
+            for(let i =0; i < cadena.length; i++ ){
+                if(letra == cadena[i]){
+                    count = count + 1
+                }
             }
+            return count
         }
-        let ProbabilidadDeWW = (CantidadDeWW/PartidosJugados.length)*100
-        let ProbabilidadDeWL = (CantidadDeWL/PartidosJugados.length)*100
-        let ProbabilidadDeLW = (CantidadDeLW/PartidosJugados.length)*100
-        let ProbabilidadDeLL = (CantidadDeLL/PartidosJugados.length)*100
-        let ProbabilidadDeW  = (CantidadDeW/PartidosJugados.length)*100
-        let ProbabilidadDeL  = (CantidadDeL/PartidosJugados.length)*100
-        let WW = (ProbabilidadDeWW/ProbabilidadDeW)*100
-        let LW = (ProbabilidadDeWL/ProbabilidadDeW)*100
-        let WL = (ProbabilidadDeLW/ProbabilidadDeL)*100
-        let LL = (ProbabilidadDeLL/ProbabilidadDeL)*100
-        if( WW + LW && WL + LL !== 100){
+
+        CantidadDeW = contadorDeLetras("W",PartidosJugados)
+        CantidadDeL = contadorDeLetras("L",PartidosJugados)
+        let WW = (CantidadDeWW/CantidadDeW)
+        let LW = (CantidadDeLW/CantidadDeL)
+        let WL = (CantidadDeWL/CantidadDeW)
+        let LL = (CantidadDeLL/CantidadDeL)
+        if( WW + LW && WL + LL !== 1){
             cien === true       
         }else{
             cien === false
