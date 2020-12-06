@@ -1,7 +1,6 @@
-
 const Solucionador = (Numero) => {
  let cien = true
- while(cien = true)
+ while(cien === true)
  {
     const funcionRandomizadora = (n) =>{
         let ArrayPartidosJugados = ""
@@ -66,9 +65,9 @@ const Solucionador = (Numero) => {
         let WL = (ProbabilidadDeLW/ProbabilidadDeL)*100
         let LL = (ProbabilidadDeLL/ProbabilidadDeL)*100
         if( WW + LW && WL + LL !== 100){
-            cien = true       
+            cien === true       
         }else{
-            cien = false
+            cien === false
             return [`P(W|W) ${WW}%`,`P(W|L) ${WL}%`,`P(L|W) ${LW}%`,`P(L|L) ${LL}%`]  
         }
         
@@ -80,4 +79,18 @@ const Solucionador = (Numero) => {
 }   
 }
 
-Solucionador(50)
+Solucionador(20)
+
+let Juan = document.getElementById("holi")
+
+Juan.addEventListener("click", ()=> {
+    let okey = 0
+    if(okey = 0){
+        let he = document.getElementById("hi")
+    he.innerHTML = '<img src="https://pbs.twimg.com/profile_banners/1323683440500350976/1605811854/600x200" />'
+    okey = 1
+    }else{
+        let he = document.getElementById("hi")
+    he.innerHTML = '<img  />'
+    }
+})
