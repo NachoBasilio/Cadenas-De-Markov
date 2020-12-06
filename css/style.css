@@ -150,13 +150,19 @@ header{
     text-decoration: none;
 }
 
+.solucion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main__div{
-
-
+    display: inline;
+    
 }
 
 .main__div1{
-
+    margin-left: 100px;
 }
 
 
