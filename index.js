@@ -42,6 +42,8 @@ const Solucionador = (Numero) => {
                 break
                 case "LL" : CantidadDeLL = CantidadDeLL + 1
                 break
+                default: 
+                break
                }
                break
            }
@@ -73,13 +75,20 @@ const Solucionador = (Numero) => {
         
     }
     let PartidosJugadosTemporada = funcionRandomizadora(Numero)
-    console.log(PartidosJugadosTemporada)
-    return console.log(separadora(PartidosJugadosTemporada))
-
+    return separadora(PartidosJugadosTemporada)
 }   
 }
 
-Solucionador(20)
+const corregidor = (n) =>{
+    let llamada = Solucionador(n)
+    let pendedor = true
+    while(pendedor===true){
+        if(llamada != undefined){
+            return llamada
+        }else{
+            llamada = Solucionador(n)
+        }
+    }
+}
 
-let Juan = document.getElementById("holi")
-
+console.log(corregidor(50))
