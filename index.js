@@ -70,7 +70,7 @@ const Solucionador = (Numero) => {
             cien === true       
         }else{
             cien === false
-            return [`P(W|W) ${WW}%`,`P(W|L) ${WL}%`,`P(L|W) ${LW}%`,`P(L|L) ${LL}%`]  
+            return [WW,LW,WL,LL,PartidosJugados[PartidosJugados.length-1],PartidosJugados]  
         }
         
     }
@@ -78,7 +78,6 @@ const Solucionador = (Numero) => {
     return separadora(PartidosJugadosTemporada)
 }   
 }
-
 const corregidor = (n) =>{
     let llamada = Solucionador(n)
     let pendedor = true
@@ -91,4 +90,5 @@ const corregidor = (n) =>{
     }
 }
 
-console.log(corregidor(50))
+
+
